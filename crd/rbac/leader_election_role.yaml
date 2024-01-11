@@ -10,6 +10,7 @@ metadata:
     app.kubernetes.io/part-of: operator
     app.kubernetes.io/managed-by: kustomize
   name: leader-election-role
+  namespace: pw5-yournamehere-operator #to set in variable
 rules:
 - apiGroups:
   - ""

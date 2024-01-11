@@ -4,6 +4,7 @@ kind: ClusterRole
 metadata:
   creationTimestamp: null
   name: manager-role
+  namespace: pw5-yournamehere-operator #to set in variable
 rules:
 - apiGroups:
   - tuto.config
