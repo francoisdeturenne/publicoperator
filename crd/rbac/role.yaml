@@ -3,8 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   creationTimestamp: null
-  name: manager-role
-  namespace: pw5-yournamehere-operator #to set in variable
+  name: manager-role  
 rules:
 - apiGroups:
   - tuto.config

@@ -9,8 +9,7 @@ metadata:
     app.kubernetes.io/created-by: operator
     app.kubernetes.io/part-of: operator
     app.kubernetes.io/managed-by: kustomize
-  name: podinfoconfig-editor-role
-  namespace: pw5-yournamehere-operator #to set in variable
+  name: podinfoconfig-editor-role 
 rules:
 - apiGroups:
   - tuto.config
