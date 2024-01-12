@@ -1,0 +1,5 @@
+---
+image:
+  repository:
+    docker.nis.innovation.nif.tech.orange/public-dockerhub/stefanprodan/podinfo
+

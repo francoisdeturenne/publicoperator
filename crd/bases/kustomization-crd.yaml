@@ -1,0 +1,27 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: sgsn-operator-crd
+  namespace: orange-cicd-ofr
+spec:
+  dependsOn:
+    - name: ${prefix}sgsn-sensitive-datas
+  interval: 120m
+  path: ./base/${prefix}operator/2-ns
+  force: true
+  prune: true
+  kubeConfig:
+    secretRef:
+      name: ${targetClusterSecret}
+  targetNamespace: ${targetNamespace}
+  sourceRef:
+    kind: GitRepository
+    name: 
+  timeout: 3m
+  #postBuild:    
+  #  substituteFrom:
+  #  - kind: ConfigMap
+  #    name: ${prefix}sgsn-operator-var-subs-cm #prefix required here as
+      #transformer/configuration won't work with cm build in 
+      #other kustomize built call

@@ -4,6 +4,7 @@
 resources:
 - bases/tuto.config_podinfoconfigs.yaml
 - rbac
+
 #+kubebuilder:scaffold:crdkustomizeresource
 
 patchesStrategicMerge:

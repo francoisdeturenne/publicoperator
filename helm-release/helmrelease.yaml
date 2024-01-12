@@ -2,8 +2,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: podinfo-hl
-  namespace: orange-cicd-ofr
+  name: ${prefix}podinfo-operator-hl
+  namespace: ${namespace}
 spec:
   chart:
     spec:
@@ -11,7 +11,7 @@ spec:
       interval: 10m
       sourceRef:
         kind: HelmRepository
-        name: ${prefix}podinfo-hr
+        name: ${prefix}podinfo-operator-hr
         namespace: orange-cicd-ofr
       version: ${podinfoChartVersion}
   driftDetection:
@@ -23,15 +23,15 @@ spec:
   kubeConfig:
     secretRef:
       name: ${targetClusterSecret}
-  releaseName: pw3-podinfo
+  releaseName: ${prefix}podinfo-operator
   storageNamespace: ${targetNamespace}
   targetNamespace: ${targetNamespace}
   valuesFrom:
     - kind: ConfigMap
-      name: podinfo-basic-cm      
+      name: podinfo-operator-basic-cm      
       optional: false
-      valuesKey: values.yaml
+      valuesKey: values-basic.yaml
     - kind: ConfigMap
-      name: ${prefix}podinfo-overrides-cm      
+      name: ${prefix}podinfo-operator-overrides-cm      
       optional: true
       valuesKey: values.yaml

@@ -9,10 +9,10 @@ commonLabels:
   env: ${envLabel}
   instance: ${instanceLabel}
 configMapGenerator:
-- name: podinfo-basic-cm
+- name: podinfo-operator-basic-cm
   namespace: orange-cicd-ofr
   files:
-  - values.yaml
+  - values-basic.yaml
 generatorOptions:  # labels will be added in generated configmap
   disableNameSuffixHash: true
   labels:
@@ -24,5 +24,6 @@ generatorOptions:  # labels will be added in generated configmap
 configurations:
 - transformer-helmrelease.yaml
 resources:
+- ../crd/
 - helmrepository.yaml
-- helmrelease.yaml
+#- helmrelease.yaml
