@@ -24,6 +24,6 @@ generatorOptions:  # labels will be added in generated configmap
 configurations:
 - transformer-helmrelease.yaml
 resources:
-- ../crd/
+#- ../crd/
 - helmrepository.yaml
 #- helmrelease.yaml

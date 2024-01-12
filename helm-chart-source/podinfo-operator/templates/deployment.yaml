@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo-operator
+  namespace: {{ .Values.namespace | default "podinfo-operator" }}
+  labels:
+    podinfo-operator/chartversion: {{ .Values.chartversion | default "6.2.0" }}
+spec:
+  selector:
+    matchLabels:
+      app: podinfo-operator
+  template:
+    metadata:
+      labels:
+        app: podinfo-operator
+    spec:
+      serviceAccountName: {{ .Values.serviceaccount | default "default" }}
+      containers:
+      - name: podinfo-operator
+        image: {{ .Values.image | default "myregistry/podinfo-operator:6.2.0" }}
+        imagePullPolicy: Always
+        env:
+        - name: OPERATOR_NAMESPACE
+          value: {{ .Values.namespace | default "podinfo-operator" }}
+        - name: URL
+          value: {{ .Values.url | default "http://localhost:31198" }}
+
