@@ -1,0 +1,19 @@
+---
+image:
+  repository:
+    docker.nis.innovation.nif.tech.orange/public-dockerhub/stefanprodan/podinfo
+
+replicaCount: 1
+
+service:
+  type: NodePort
+  nodePort: 31206
+
+ingress:
+  enabled: true
+
+securityContext:
+  privileged: false
+  readOnlyRootFilesystem: true
+  runAsGroup: 10001
+  runAsUser: 10001

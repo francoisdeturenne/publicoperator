@@ -1,0 +1,28 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+#
+# BEGIN need updates
+#
+namePrefix: ${prefix}
+commonLabels:
+  env: ${envLabel}
+  instance: ${instanceLabel}
+configMapGenerator:
+- name: podinfo-basic-cm
+  namespace: orange-cicd-ofr
+  files:
+  - values.yaml
+generatorOptions:  # labels will be added in generated configmap
+  disableNameSuffixHash: true
+  labels:
+    env: ${envLabel}
+    instance: ${instanceLabel}
+#
+# END need updates
+#
+configurations:
+- transformer-helmrelease.yaml
+resources:
+- helmrepository.yaml
+- helmrelease.yaml
