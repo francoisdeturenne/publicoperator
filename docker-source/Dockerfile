@@ -1,6 +1,6 @@
 # Build the manager binary
 FROM golang:1.19 as builder
-LABEL org.opencontainers.image.source=https://ghcr.io/francois.deturenne/podinfo-op-debug:6.2.0
+LABEL org.opencontainers.image.source=https://ghcr.io/francoisdeturenne/podinfo-op-debug:6.2.0
 ARG TARGETOS
 ARG TARGETARCH
 
