@@ -4,11 +4,6 @@ LABEL org.opencontainers.image.source=https://ghcr.io/francois.deturenne/podinfo
 ARG TARGETOS
 ARG TARGETARCH
 
-ENV https_proxy http://proxy.rd.francetelecom.fr:8080
-ENV HTTPS_PROXY http://proxy.rd.francetelecom.fr:8080
-ENV HTTP_PROXY http://proxy.rd.francetelecom.fr:8080
-ENV http_proxy http://proxy.rd.francetelecom.fr:8080
-
 WORKDIR /workspace
 # Copy the Go Modules manifests
 COPY go.mod go.mod
