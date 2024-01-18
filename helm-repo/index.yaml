@@ -3,12 +3,12 @@ entries:
   podinfo-operator:
   - apiVersion: v2
     appVersion: 6.2.0
-    created: "2024-01-18T08:25:31.863797+01:00"
+    created: "2024-01-18T09:04:05.822266+01:00"
     description: A Helm chart to install the Podinfo Operator
-    digest: d4024094da908c9c0f884f3bc5e26879d59ef77311be102aa9da4470c3a45364
+    digest: 3aacee0b520d62e8da9a1bfbe9637ff25dedf6b6fa162b712ab2e55f967d09aa
     name: podinfo-operator
     type: application
     urls:
     - podinfo-operator-6.2.0.tgz
     version: 6.2.0
-generated: "2024-01-18T08:25:31.862048+01:00"
+generated: "2024-01-18T09:04:05.818899+01:00"
