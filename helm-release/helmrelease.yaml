@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: ${prefix}podinfo-operator-hr
         namespace: orange-cicd-ofr
-      version: ${podinfoChartVersion}
+      version: ${operatorChartVersion}
   driftDetection:
     mode: enabled
   install:
