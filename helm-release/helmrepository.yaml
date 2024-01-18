@@ -1,9 +1,0 @@
----
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: podinfo-operator-hr
-  namespace: orange-cicd-ofr
-spec:
-  interval: 10m
-  url: https://francoisdeturenne.gihub.io/publicoperator/helm-repo

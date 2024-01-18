@@ -15,7 +15,7 @@ spec:
       labels:
         app: podinfo-operator
     spec:
-      serviceAccountName: {{ .Values.serviceaccount | default "default" }}
+      serviceAccountName: {{ .Values.serviceaccount | default "controller-manager-podinfo-operator" }}
       containers:
       - name: {{ .Values.prefixchart | default "" }}podinfo-operator-pod
         image: {{ .Values.image | default "myregistry/podinfo-operator:6.2.0" }}
