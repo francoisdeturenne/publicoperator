@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo-operator
+  name: {{ .Values.name | default "podinfo-operator" }} 
   namespace: {{ .Values.namespace | default "podinfo-operator" }}
   labels:
     podinfo-operator/chartversion: {{ .Values.chartversion | default "6.2.0" }}
