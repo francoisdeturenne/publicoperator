@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.name | default "podinfo-operator" }} 
+  name: {{ .Values.prefixchart | default "" }}podinfo-operator-dep 
   namespace: {{ .Values.namespace | default "podinfo-operator" }}
   labels:
     podinfo-operator/chartversion: {{ .Values.chartversion | default "6.2.0" }}
@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccountName: {{ .Values.serviceaccount | default "default" }}
       containers:
-      - name: podinfo-operator
+      - name: {{ .Values.prefixchart | default "" }}podinfo-operator-pod
         image: {{ .Values.image | default "myregistry/podinfo-operator:6.2.0" }}
         imagePullPolicy: Always
         env:
