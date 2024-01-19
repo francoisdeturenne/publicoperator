@@ -1,0 +1,13 @@
+apiVersion: tuto.config/v1
+kind: PodinfoConfig
+metadata:
+  labels:
+    app.kubernetes.io/name: podinfoconfig
+    app.kubernetes.io/instance: podinfoconfig-sample
+    app.kubernetes.io/part-of: operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator
+  name: {{ .Values.prefixchart | default "" }}podinfo-config-sample
+  namespace: {{ .Values.namespace | default "podinfo-operator" }}
+spec:
+  readyz: enable
