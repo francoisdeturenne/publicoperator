@@ -164,6 +164,8 @@ func (r *PodinfoConfigReconciler) postReadyz(request string) error {
 		logger.Info("error detected in post client " + URL + " " + err.Error())
 		return err
 	}
+
+	logger.Info("Code de statut HTTP :", resp.StatusCode)
 	defer resp.Body.Close()
 	return nil
 }

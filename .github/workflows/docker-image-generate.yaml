@@ -1,7 +1,7 @@
 name: Deploy podinfo operator to GHCR
 
 env:
-  DOTNET_VERSION: '6.2.4'
+  DOTNET_VERSION: '6.2.5'
 
 on:
   push:
