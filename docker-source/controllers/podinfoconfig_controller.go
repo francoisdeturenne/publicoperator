@@ -126,15 +126,17 @@ func (r *PodinfoConfigReconciler) Configure(intent_config *string) error {
 	logger := log.Log
 	if *intent_config == ENABLE {
 		logger.Info("Post", "intent", "enable")
-		resp, err := http.Post(URL+"readyz/enable", "application/json", bytes.NewBufferString(""))
-		defer resp.Body.Close()
+		//resp, err := http.Post(URL+"readyz/enable", "application/json", bytes.NewBufferString(""))
+		err := r.postReadyz("readyz/enable")
+		//defer resp.Body.Close()
 		if err != nil {
 			return err
 		}
 	} else {
 		logger.Info("Post", "intent", "disable")
-		resp, err := http.Post(URL+"readyz/disable", "application/json", bytes.NewBufferString(""))
-		defer resp.Body.Close()
+		//resp, err := http.Post(URL+"readyz/disable", "application/json", bytes.NewBufferString(""))
+		err := r.postReadyz("readyz/disable")
+		//defer resp.Body.Close()
 		if err != nil {
 			return err
 		}
@@ -142,26 +144,29 @@ func (r *PodinfoConfigReconciler) Configure(intent_config *string) error {
 	return nil
 }
 
-/*
 func (r *PodinfoConfigReconciler) postReadyz(request string) error {
 	logger := log.Log
 
-	httpposturl := URL + request
+	URL := URL + request
+	data := []byte("")
 
-	var jsonData = []byte(``)
-	request, error := http.NewRequest("POST", httpposturl, bytes.NewBuffer(jsonData))
-	request.Header.Set("Content-Type", "application/json; charset=UTF-8")
+	req, err := http.NewRequest("POST", URL, bytes.NewBuffer(data))
+	if err != nil {
+		logger.Info("error detected in post request" + URL + " " + err.Error())
+		return err
+	}
+
+	req.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
-	response, error := client.Do(request)
-
-	defer response.Body.Close()
-
-	if error != nil {
-		return error
+	resp, err := client.Do(req)
+	if err != nil {
+		logger.Info("error detected in post client " + URL + " " + err.Error())
+		return err
 	}
+	defer resp.Body.Close()
 	return nil
-}*/
+}
 
 // SetupWithManager sets up the controller with the Manager.
 func (r *PodinfoConfigReconciler) SetupWithManager(mgr ctrl.Manager) error {
