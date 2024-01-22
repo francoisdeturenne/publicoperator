@@ -22,6 +22,7 @@ import (
 	"errors"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"k8s.io/apimachinery/pkg/runtime"
@@ -165,7 +166,7 @@ func (r *PodinfoConfigReconciler) postReadyz(request string) error {
 		return err
 	}
 
-	logger.Info("Code de statut HTTP :", resp.StatusCode)
+	logger.Info("Code de statut HTTP :" + strconv.Itoa(resp.StatusCode))
 	defer resp.Body.Close()
 	return nil
 }
