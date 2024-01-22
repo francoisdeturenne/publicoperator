@@ -100,7 +100,7 @@ func (r *PodinfoConfigReconciler) Reconcile(ctx context.Context, req ctrl.Reques
 		err := r.Configure(&intent_config)
 		logger.Info("- - - - - - - - - END - - - - - - - - -")
 		if err != nil {
-			logger.Error("config error detected", err)
+			logger.Info("config error :" + err.Error())
 			return ctrl.Result{RequeueAfter: REQUEUE_DURATION}, nil
 		}
 		return ctrl.Result{RequeueAfter: UPDATING_TIME}, nil
