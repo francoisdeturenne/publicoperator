@@ -126,19 +126,42 @@ func (r *PodinfoConfigReconciler) Configure(intent_config *string) error {
 	logger := log.Log
 	if *intent_config == ENABLE {
 		logger.Info("Post", "intent", "enable")
-		_, err := http.Post(URL+"readyz/enable", "application/json", bytes.NewBufferString(""))
+		resp, err := http.Post(URL+"readyz/enable", "application/json", bytes.NewBufferString(""))
+		defer resp.Body.Close()
 		if err != nil {
 			return err
 		}
 	} else {
 		logger.Info("Post", "intent", "disable")
-		_, err := http.Post(URL+"readyz/disable", "application/json", bytes.NewBufferString(""))
+		resp, err := http.Post(URL+"readyz/disable", "application/json", bytes.NewBufferString(""))
+		defer resp.Body.Close()
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
+
+/*
+func (r *PodinfoConfigReconciler) postReadyz(request string) error {
+	logger := log.Log
+
+	httpposturl := URL + request
+
+	var jsonData = []byte(``)
+	request, error := http.NewRequest("POST", httpposturl, bytes.NewBuffer(jsonData))
+	request.Header.Set("Content-Type", "application/json; charset=UTF-8")
+
+	client := &http.Client{}
+	response, error := client.Do(request)
+
+	defer response.Body.Close()
+
+	if error != nil {
+		return error
+	}
+	return nil
+}*/
 
 // SetupWithManager sets up the controller with the Manager.
 func (r *PodinfoConfigReconciler) SetupWithManager(mgr ctrl.Manager) error {
