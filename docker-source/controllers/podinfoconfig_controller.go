@@ -122,12 +122,15 @@ func (r *PodinfoConfigReconciler) GetDeviceConfig(real_config *string) error {
 }
 
 func (r *PodinfoConfigReconciler) Configure(intent_config *string) error {
+	logger := log.Log
 	if *intent_config == ENABLE {
+		logger.Info("Post", "intent", "enable")
 		_, err := http.Post(URL+"readyz/enable", "application/json", bytes.NewBufferString(""))
 		if err != nil {
 			return err
 		}
 	} else {
+		logger.Info("Post", "intent", "disable")
 		_, err := http.Post(URL+"readyz/disable", "application/json", bytes.NewBufferString(""))
 		if err != nil {
 			return err
