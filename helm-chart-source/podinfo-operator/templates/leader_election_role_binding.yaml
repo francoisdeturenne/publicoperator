@@ -15,5 +15,5 @@ roleRef:
   name: {{ .Values.prefixchart | default "" }}leader-election-role
 subjects:
 - kind: ServiceAccount
-  name: {{ .Values.prefixchart | default "" }}controller-manager-podinfo-operator
+  name: {{ .Values.serviceaccount | default "controller-manager-podinfo-operator" }}
   namespace: {{ .Values.namespace | default "podinfo-operator" }}
