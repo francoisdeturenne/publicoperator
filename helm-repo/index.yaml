@@ -3,7 +3,7 @@ entries:
   podinfo-operator:
   - apiVersion: v2
     appVersion: 6.2.0
-    created: "2024-02-02T16:45:40.211148+01:00"
+    created: "2024-02-02T17:04:19.030212+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 3aacee0b520d62e8da9a1bfbe9637ff25dedf6b6fa162b712ab2e55f967d09aa
     name: podinfo-operator
@@ -14,9 +14,9 @@ entries:
   podinfo-operator-chart:
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-02-02T16:45:40.227471+01:00"
+    created: "2024-02-02T17:04:19.0403+01:00"
     description: A Helm chart to install the Podinfo Operator
-    digest: 9434f0be85d73aad4546deef6121bd6e5ee6eb7b80bfc293e4505c44284a7c44
+    digest: 63c5cf1ff1a72ab3ba4da704651b1d7ddba4f87b59756665a41eadedd72b7570
     name: podinfo-operator-chart
     type: application
     urls:
@@ -24,7 +24,7 @@ entries:
     version: 6.2.3
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-02-02T16:45:40.226969+01:00"
+    created: "2024-02-02T17:04:19.039893+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 2ca00854cbcd8225850c9663287af2d29ba37a919e9b41fdb2c285c6d99f6b6d
     name: podinfo-operator-chart
@@ -34,7 +34,7 @@ entries:
     version: 6.2.2
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-02-02T16:45:40.219865+01:00"
+    created: "2024-02-02T17:04:19.033898+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 1ef11ffdfe0b983a1e79a9ba399875f15308dccb0388264471b506481dbabfde
     name: podinfo-operator-chart
@@ -42,4 +42,4 @@ entries:
     urls:
     - podinfo-operator-chart-6.2.1.tgz
     version: 6.2.1
-generated: "2024-02-02T16:45:40.200561+01:00"
+generated: "2024-02-02T17:04:19.022505+01:00"
