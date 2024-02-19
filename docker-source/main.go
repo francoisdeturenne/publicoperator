@@ -19,6 +19,8 @@ package main
 import (
 	"flag"
 	"os"
+	"strconv"
+	"time"
 
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	// to ensure that exec-entrypoint and run can make use of them.
@@ -40,7 +42,9 @@ var (
 	scheme   = runtime.NewScheme()
 	setupLog = ctrl.Log.WithName("setup")
 
-	OPERATOR_NAMESPACE = controllers.GetEnv("OPERATOR_NAMESPACE", "podinfo-operator")
+	OPERATOR_NAMESPACE      = controllers.GetEnv("OPERATOR_NAMESPACE", "podinfo-operator")
+	REQUEUE_DURATION        time.Duration
+	RECONCILIATION_LOOP_STR = controllers.GetEnv("RECONCILIATION_LOOP", "20")
 )
 
 func init() {
@@ -54,6 +58,19 @@ func main() {
 	var metricsAddr string
 	var enableLeaderElection bool
 	var probeAddr string
+	var duration int
+
+	reconciliationLoop, err := strconv.Atoi(RECONCILIATION_LOOP_STR)
+
+	if err != nil {
+		duration = 20
+	} else {
+		duration = reconciliationLoop
+	}
+
+	REQUEUE_DURATION := time.Duration(duration) * time.Second
+
+	flag.IntVar(&duration, "duration", 20, "loop reconciliation duration in s")
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8082", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,
@@ -95,7 +112,7 @@ func main() {
 	if err = (&controllers.PodinfoConfigReconciler{
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
-	}).SetupWithManager(mgr); err != nil {
+	}).SetupWithManager(mgr, REQUEUE_DURATION); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "PodinfoConfig")
 		os.Exit(1)
 	}
