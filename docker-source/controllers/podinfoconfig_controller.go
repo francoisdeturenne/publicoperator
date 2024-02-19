@@ -34,15 +34,16 @@ import (
 )
 
 const (
-	REQUEUE_DURATION = 20 * time.Second
-	UPDATING_TIME    = 30 * time.Second
+	//REQUEUE_DURATION = 20 * time.Second
+	UPDATING_TIME = 30 * time.Second
 
 	ENABLE  = "enable"
 	DISABLE = "disable"
 )
 
 var (
-	URL = GetEnv("URL", "http://localhost:31198") + "/"
+	URL              = GetEnv("URL", "http://localhost:31198") + "/"
+	REQUEUE_DURATION time.Duration
 )
 
 // PodinfoConfigReconciler reconciles a PodinfoConfig object
@@ -172,7 +173,8 @@ func (r *PodinfoConfigReconciler) postReadyz(request string) error {
 }
 
 // SetupWithManager sets up the controller with the Manager.
-func (r *PodinfoConfigReconciler) SetupWithManager(mgr ctrl.Manager) error {
+func (r *PodinfoConfigReconciler) SetupWithManager(mgr ctrl.Manager, duration time.Duration) error {
+	REQUEUE_DURATION = duration
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&tutov1.PodinfoConfig{}).
 		Complete(r)
