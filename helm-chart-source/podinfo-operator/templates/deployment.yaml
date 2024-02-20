@@ -25,4 +25,6 @@ spec:
           value: {{ .Values.namespace | default "podinfo-operator" }}
         - name: URL
           value: {{ .Values.url | default "http://localhost:31198" }}
+        - name: RECONCILIATION_LOOP
+          value: {{ .Values.reconciliation_loop | default "20" }}
 
