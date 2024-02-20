@@ -44,7 +44,7 @@ var (
 
 	OPERATOR_NAMESPACE      = controllers.GetEnv("OPERATOR_NAMESPACE", "podinfo-operator")
 	REQUEUE_DURATION        time.Duration
-	RECONCILIATION_LOOP_STR = controllers.GetEnv("RECONCILIATION_LOOP", "!!str20")
+	RECONCILIATION_LOOP_STR = controllers.GetEnv("RECONCILIATION_LOOP", "20")
 )
 
 func init() {
@@ -70,7 +70,6 @@ func main() {
 
 	REQUEUE_DURATION := time.Duration(duration) * time.Second
 
-	flag.IntVar(&duration, "duration", 20, "loop reconciliation duration in s")
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8082", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,
@@ -92,7 +91,7 @@ func main() {
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "84facc20.config",
 		Namespace:              OPERATOR_NAMESPACE,
-		ReconciliationLoop:     RECONCILIATION_LOOP,
+
 		// LeaderElectionReleaseOnCancel defines if the leader should step down voluntarily
 		// when the Manager ends. This requires the binary to immediately end when the
 		// Manager is stopped, otherwise, this setting is unsafe. Setting this significantly

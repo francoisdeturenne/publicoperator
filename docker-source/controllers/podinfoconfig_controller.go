@@ -175,6 +175,8 @@ func (r *PodinfoConfigReconciler) postReadyz(request string) error {
 // SetupWithManager sets up the controller with the Manager.
 func (r *PodinfoConfigReconciler) SetupWithManager(mgr ctrl.Manager, duration time.Duration) error {
 	REQUEUE_DURATION = duration
+	logger := log.Log
+	logger.Info("loop duration :" + duration.String())
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&tutov1.PodinfoConfig{}).
 		Complete(r)
