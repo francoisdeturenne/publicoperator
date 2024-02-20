@@ -44,7 +44,7 @@ var (
 
 	OPERATOR_NAMESPACE      = controllers.GetEnv("OPERATOR_NAMESPACE", "podinfo-operator")
 	REQUEUE_DURATION        time.Duration
-	RECONCILIATION_LOOP_STR = controllers.GetEnv("RECONCILIATION_LOOP", "20")
+	RECONCILIATION_LOOP_STR = controllers.GetEnv("RECONCILIATION_LOOP", "!!str20")
 )
 
 func init() {
