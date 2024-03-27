@@ -3,7 +3,7 @@ entries:
   nrf-operator:
   - apiVersion: v1
     appVersion: 22.4.0
-    created: "2024-03-27T09:43:46.250556+01:00"
+    created: "2024-03-27T09:45:39.562021+01:00"
     description: A Helm chart to install the NRF Operator
     digest: 176b71024b64591115defee456089d0d8e555dab1f5876747769fdbc9b1d29d9
     name: nrf-operator
@@ -13,24 +13,8 @@ entries:
     version: 22.4.0
   podinfo:
   - apiVersion: v1
-    appVersion: 7.7.4
-    created: "2024-03-27T09:43:46.358768+01:00"
-    description: Podinfo Helm chart for Kubernetes
-    digest: 987b228620f74b6db723af423a06fb243dac9e04d7fd9be8a98604ce755a8c62
-    home: https://github.com/stefanprodan/podinfo
-    kubeVersion: '>=1.23.0-0'
-    maintainers:
-    - email: stefanprodan@users.noreply.github.com
-      name: stefanprodan
-    name: podinfo
-    sources:
-    - https://github.com/stefanprodan/podinfo
-    urls:
-    - podinfo-7.7.4.tgz
-    version: 7.7.4
-  - apiVersion: v1
     appVersion: 7.6.5
-    created: "2024-03-27T09:43:46.354811+01:00"
+    created: "2024-03-27T09:45:39.57458+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 301658f5ab1a6e2536563889a4d0d6ef6f80adc0929a4839ecac524d465b113f
     home: https://github.com/stefanprodan/podinfo
@@ -46,7 +30,7 @@ entries:
     version: 7.6.5
   - apiVersion: v1
     appVersion: 7.6.2
-    created: "2024-03-27T09:43:46.349304+01:00"
+    created: "2024-03-27T09:45:39.574049+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 8efe7da8d65a3836c6248ae4e09cfc53f9760f27c8ec0cf0ce1131777be83e16
     home: https://github.com/stefanprodan/podinfo
@@ -62,7 +46,7 @@ entries:
     version: 7.6.2
   - apiVersion: v1
     appVersion: 7.6.0
-    created: "2024-03-27T09:43:46.34369+01:00"
+    created: "2024-03-27T09:45:39.573385+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: ee0d5a9d7b4b966e258af100d8518704ba590e16ca7dfacd06ecc8df30210367
     home: https://github.com/stefanprodan/podinfo
@@ -78,7 +62,7 @@ entries:
     version: 7.6.0
   - apiVersion: v1
     appVersion: 7.5.0
-    created: "2024-03-27T09:43:46.337635+01:00"
+    created: "2024-03-27T09:45:39.572634+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 889da19da6d4fdd782ca9408b4884707722f22b1d4fe55a6b23c2882f34fee9e
     home: https://github.com/stefanprodan/podinfo
@@ -94,7 +78,7 @@ entries:
     version: 7.5.0
   - apiVersion: v1
     appVersion: 7.4.4
-    created: "2024-03-27T09:43:46.332162+01:00"
+    created: "2024-03-27T09:45:39.571958+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 46d24e9fb237e6049855abb0726b1501211b685c31ddad558d0ae848c4de46ab
     home: https://github.com/stefanprodan/podinfo
@@ -110,7 +94,7 @@ entries:
     version: 7.4.4
   - apiVersion: v1
     appVersion: 7.4.0
-    created: "2024-03-27T09:43:46.326053+01:00"
+    created: "2024-03-27T09:45:39.571264+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: ad6f1399aa8aa3df5f002747e6699fa1e7750c4ea321171e35b9b656d6edae3c
     home: https://github.com/stefanprodan/podinfo
@@ -126,7 +110,7 @@ entries:
     version: 7.4.0
   - apiVersion: v1
     appVersion: 7.3.4
-    created: "2024-03-27T09:43:46.318839+01:00"
+    created: "2024-03-27T09:45:39.570718+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 1b127803a1ff0b1b2e7d476f3c986a7b79e66f32bc3596c54dcd7e5ac6718363
     home: https://github.com/stefanprodan/podinfo
@@ -142,7 +126,7 @@ entries:
     version: 7.3.4
   - apiVersion: v1
     appVersion: 7.3.1
-    created: "2024-03-27T09:43:46.313283+01:00"
+    created: "2024-03-27T09:45:39.57016+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 7ead5c3d0ff7d1ca89f8729c4a493c6af07e2ca2be7fcd537f1c6e039770964c
     home: https://github.com/stefanprodan/podinfo
@@ -158,7 +142,7 @@ entries:
     version: 7.3.1
   - apiVersion: v1
     appVersion: 7.3.0
-    created: "2024-03-27T09:43:46.306762+01:00"
+    created: "2024-03-27T09:45:39.568945+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: feef716155f5c49070f65a3c917d14c4c24d3b9fbcd19a3800252ac8aff319af
     home: https://github.com/stefanprodan/podinfo
@@ -174,7 +158,7 @@ entries:
     version: 7.3.0
   - apiVersion: v1
     appVersion: 7.2.2
-    created: "2024-03-27T09:43:46.301353+01:00"
+    created: "2024-03-27T09:45:39.568239+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 4add14bf82c439dc532f4fab54938bc2552075ac778c7ba63623d59596f4d996
     home: https://github.com/stefanprodan/podinfo
@@ -190,7 +174,7 @@ entries:
     version: 7.2.2
   - apiVersion: v1
     appVersion: 7.2.0
-    created: "2024-03-27T09:43:46.295549+01:00"
+    created: "2024-03-27T09:45:39.56752+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 45ca1732fe582f083b151e4418928b4608f16ae62cf68d34f525ef5fff87512f
     home: https://github.com/stefanprodan/podinfo
@@ -206,9 +190,9 @@ entries:
     version: 7.2.0
   - apiVersion: v1
     appVersion: 7.1.0
-    created: "2024-03-27T09:43:46.288145+01:00"
+    created: "2024-03-27T09:45:39.566802+01:00"
     description: Podinfo Helm chart for Kubernetes
-    digest: 081b9885dc6b6b7ef295020e764841d287ec7f864ce525dbdd6083bf837dfa71
+    digest: 550564c95ad3577a90e05390e623a69486abf44e7aa4473857e79667ff75b19b
     home: https://github.com/stefanprodan/podinfo
     kubeVersion: '>=1.23.0-0'
     maintainers:
@@ -221,8 +205,24 @@ entries:
     - podinfo-7.1.0.tgz
     version: 7.1.0
   - apiVersion: v1
+    appVersion: 6.6.6
+    created: "2024-03-27T09:45:39.565891+01:00"
+    description: Podinfo Helm chart for Kubernetes
+    digest: 2d922e9ec0fd0af5698dcb902cb76054f9ed973790c626be832fd5b55cb5fe55
+    home: https://github.com/stefanprodan/podinfo
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: stefanprodan@users.noreply.github.com
+      name: stefanprodan
+    name: podinfo
+    sources:
+    - https://github.com/stefanprodan/podinfo
+    urls:
+    - podinfo-6.6.6.tgz
+    version: 6.6.6
+  - apiVersion: v1
     appVersion: 6.5.4
-    created: "2024-03-27T09:43:46.28231+01:00"
+    created: "2024-03-27T09:45:39.564897+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: dad527730f0faa495b3c3e7436a05ac0e9b4401f3a7640cc7e7244662ad3c611
     home: https://github.com/stefanprodan/podinfo
@@ -238,7 +238,7 @@ entries:
     version: 6.5.4
   - apiVersion: v1
     appVersion: 6.5.3
-    created: "2024-03-27T09:43:46.2768+01:00"
+    created: "2024-03-27T09:45:39.564328+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: f7e92036c2c36e1ab51c2951bb3eb73858511f6308eae7e171dc76b770fe7c90
     home: https://github.com/stefanprodan/podinfo
@@ -254,7 +254,7 @@ entries:
     version: 6.5.3
   - apiVersion: v1
     appVersion: 6.5.2
-    created: "2024-03-27T09:43:46.270505+01:00"
+    created: "2024-03-27T09:45:39.563535+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: 98eeab2a630dbe6605266b635d0dfa0ce595bfe019b843f628c775ed1c588838
     home: https://github.com/stefanprodan/podinfo
@@ -270,7 +270,7 @@ entries:
     version: 6.5.2
   - apiVersion: v1
     appVersion: 6.5.1
-    created: "2024-03-27T09:43:46.260694+01:00"
+    created: "2024-03-27T09:45:39.562776+01:00"
     description: Podinfo Helm chart for Kubernetes
     digest: c8d9148d7804dff85e86524a00d9676756ba93b8118c885ec0be6166eacada86
     home: https://github.com/stefanprodan/podinfo
@@ -287,7 +287,7 @@ entries:
   podinfo-operator:
   - apiVersion: v2
     appVersion: 6.2.0
-    created: "2024-03-27T09:43:46.366147+01:00"
+    created: "2024-03-27T09:45:39.574896+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 3aacee0b520d62e8da9a1bfbe9637ff25dedf6b6fa162b712ab2e55f967d09aa
     name: podinfo-operator
@@ -298,7 +298,7 @@ entries:
   podinfo-operator-chart:
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-03-27T09:43:46.392631+01:00"
+    created: "2024-03-27T09:45:39.576581+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: ec72c771b5ab2bccb5dd7e86f7ba7c5916c3515b8f266e12672f192bc108f4ea
     name: podinfo-operator-chart
@@ -308,7 +308,7 @@ entries:
     version: 6.2.5
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-03-27T09:43:46.388115+01:00"
+    created: "2024-03-27T09:45:39.576187+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 35e9fe599a0e26ddfadc4b737f4377a79af9c3a068e7138ab2ed062bb0961bed
     name: podinfo-operator-chart
@@ -318,7 +318,7 @@ entries:
     version: 6.2.4
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-03-27T09:43:46.381742+01:00"
+    created: "2024-03-27T09:45:39.575606+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 63c5cf1ff1a72ab3ba4da704651b1d7ddba4f87b59756665a41eadedd72b7570
     name: podinfo-operator-chart
@@ -328,7 +328,7 @@ entries:
     version: 6.2.3
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-03-27T09:43:46.376505+01:00"
+    created: "2024-03-27T09:45:39.575375+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 2ca00854cbcd8225850c9663287af2d29ba37a919e9b41fdb2c285c6d99f6b6d
     name: podinfo-operator-chart
@@ -338,7 +338,7 @@ entries:
     version: 6.2.2
   - apiVersion: v2
     appVersion: 6.2.1
-    created: "2024-03-27T09:43:46.370673+01:00"
+    created: "2024-03-27T09:45:39.575143+01:00"
     description: A Helm chart to install the Podinfo Operator
     digest: 1ef11ffdfe0b983a1e79a9ba399875f15308dccb0388264471b506481dbabfde
     name: podinfo-operator-chart
@@ -346,4 +346,4 @@ entries:
     urls:
     - podinfo-operator-chart-6.2.1.tgz
     version: 6.2.1
-generated: "2024-03-27T09:43:46.249484+01:00"
+generated: "2024-03-27T09:45:39.561364+01:00"
